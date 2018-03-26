@@ -11,7 +11,10 @@ def addRect(imgToRead, imgToSave,x,y,z,w, lw, color, facecolor):
   ax.imshow(im)
   #rect = patches.Rectangle((50,100),40,30,linewidth=1,edgecolor='r',facecolor='none') 
   rect = patches.Rectangle((x,y),z,w,linewidth=lw,edgecolor=color,facecolor=facecolor) 
-  ax.add_patch(rect)  
+  ax.add_patch(rect)
+  
+  #plt.axis('off')    # Remove axis from image
+  
   plt.savefig(imgToSave)
   plt.close()
   return
